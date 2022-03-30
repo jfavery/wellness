@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "9a1a92567da5ba281853eeb8aa848932366c22d4c906cd6a3183548b7eafb970"
+build_start_time: [1648653216, 13581991]
+build_end_time: [1648653220, 452519893]
+inputs:
+  "/Users/jaffe/Desktop/wellness/macos/Flutter/GeneratedPluginRegistrant.swift": [1648653202, 901226043]
+  "/Users/jaffe/Desktop/wellness/macos/Runner/AppDelegate.swift": [1648649993, 271768093]
+  "/Users/jaffe/Desktop/wellness/macos/Runner/MainFlutterWindow.swift": [1648649993, 273136377]
