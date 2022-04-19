@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 void main() {
   runApp(const WellnessApp());
@@ -14,7 +15,7 @@ class WellnessApp extends StatelessWidget {
       title: 'Wellness',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.lime,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
@@ -32,9 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
+        toolbarHeight: 140,
         title: Column(
             children: <Widget>[
+              Image.asset('assets/images/tree.png', height: 50, width: 50),
               SizedBox(height: 10),
               Align(
                 alignment: Alignment.topCenter,
@@ -77,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Container(
-                  height: 650, //height of TabBarView
+                  height: 599, //height of TabBarView
                   decoration: const BoxDecoration(
                       border: Border(
                           top: BorderSide(color: Colors.grey, width: 0.5))),
@@ -87,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         alignment: Alignment.topLeft,
                         child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id est laborum.',
                           style: TextStyle(
-                                fontSize: 21, fontWeight: FontWeight.normal
+                                fontSize: 18, fontWeight: FontWeight.normal
                             ),
                         ),
                       ),
@@ -95,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         alignment: Alignment.topLeft,
                         child: Text('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
                             style: TextStyle(
-                                fontSize: 21, fontWeight: FontWeight.normal
+                                fontSize: 18, fontWeight: FontWeight.normal
                             ),
                         ),
                       ),
@@ -103,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         alignment: Alignment.topLeft,
                         child: Text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
                             style: TextStyle(
-                                fontSize: 21, fontWeight: FontWeight.normal
+                                fontSize: 18, fontWeight: FontWeight.normal
                             )
                         ),
                       ),
@@ -111,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         alignment: Alignment.topLeft,
                         child: Text('Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?',
                             style: TextStyle(
-                                fontSize: 21, fontWeight: FontWeight.normal
+                                fontSize: 18, fontWeight: FontWeight.normal
                             ),
                         ),
                       ),
@@ -119,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         alignment: Alignment.topLeft,
                         child: Text('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
                             style: TextStyle(
-                                fontSize: 21, fontWeight: FontWeight.normal
+                                fontSize: 18, fontWeight: FontWeight.normal
                             )
                         ),
                       ),
